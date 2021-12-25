@@ -1,0 +1,193 @@
+@import './variables';
+@import './responsiveness';
+
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+
+    background-image: url('../images/bg-intro-mobile.png');
+    background-position: center;
+    background-size: cover;
+    background-color: $red;
+
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 40px;
+    margin: 5vh auto;
+}
+
+header {
+    color: white;
+    text-align: center;
+
+    p {
+        font-size: .8rem;
+        width: 70%;
+        margin: 0 auto;
+        line-height: 25px;
+    }
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+    margin: 0 auto;
+    row-gap: 15px;
+    
+    .trial {
+        background-color: $blue;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px 0;
+        width: 90%;
+
+        p {
+            width: 70%;
+            margin: 0 auto;
+            color: $grayish-blue;
+
+            b {
+                color: white;
+            }
+        }
+    }
+
+    .form-container {
+        background-color: white;
+        padding: 10px 0 20px;
+        border-radius: 5px;
+        width: 90%;
+
+        form {
+            display: grid;
+            grid-auto-flow: row;
+            padding: 10px 15px;
+            row-gap: 20px;
+
+            input {
+                color: $grayish-blue;
+
+                &::placeholder {
+                    font-weight: $semiBold;
+                }
+            }
+
+            input, button {
+                border: 1px solid $grayish-blue;
+                border-radius: 5px;
+                height: 50px;
+                padding: 5px 15px;
+                font-size: 1.1rem;
+                width: 90%;
+            }
+
+            button {
+                text-transform: uppercase;
+                color: white;
+                border: none;
+                background-color: $green;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+            width: 90%;
+            font-size: .85rem;
+            color: $grayish-blue;
+            margin: 0 auto;
+
+            b {
+                color: $red;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px) {
+    
+}
+
+@media screen and (min-width: 950px) and (max-width: 1500px) {
+    body {
+        grid-auto-flow: column;
+        grid-template-columns: 40% 60%;
+        column-gap: 40px;
+
+        background-image: url('../images/bg-intro-desktop.png');
+        margin: 10vh auto;
+        width: 90%;
+    }
+
+    header {
+        align-self: center;
+        text-align: left;
+        margin-left: 80px;
+        width: 100%;
+        font-size: 1.4rem;
+
+        h1 {
+            margin-left: 70px;
+        }
+
+        p {
+            width: 80%;
+            margin-left: 70px;
+        }
+    }
+
+    .container {
+        width: 72%;
+        
+        .trial {
+            padding: 20px 0;
+        }
+
+        .form-container {
+
+            form {
+                // row-gap: 5px;
+                // padding-left: 30px;
+                .input-container {
+                    display: flex;
+                    
+    
+                    input, button {
+                        margin: 0 auto;
+                        width: 92%;
+                    }
+
+                    .error-icon {
+                        position: relative;
+                        top: 15px;
+                        right: 40px;
+                        width: 20px;
+                        height: 30px;
+                    }
+                }
+
+                .error-message, .error-icon {
+                    display: none;
+                }
+
+                .error-message {
+                    color: red;
+                    margin: 5px 0;
+                    justify-self: flex-end;
+                    font-size: .7rem;
+                }
+
+                button {
+                    width: 100%;
+
+                    &:hover {
+                        background-image: linear-gradient(rgba(207, 205, 205, 0.4) 0 0);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-image: url("../images/bg-intro-mobile.png");
+  background-position: center;
+  background-size: cover;
+  background-color: #ff7a7a;
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 40px;
+  margin: 5vh auto;
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+header p {
+  font-size: 0.8rem;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 25px;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  margin: 0 auto;
+  row-gap: 15px;
+}
+.container .trial {
+  background-color: #6055a5;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 0;
+  width: 90%;
+}
+.container .trial p {
+  width: 70%;
+  margin: 0 auto;
+  color: #b9b6d3;
+}
+.container .trial p b {
+  color: white;
+}
+.container .form-container {
+  background-color: white;
+  padding: 10px 0 20px;
+  border-radius: 5px;
+  width: 90%;
+}
+.container .form-container form {
+  display: grid;
+  grid-auto-flow: row;
+  padding: 10px 15px;
+  row-gap: 20px;
+}
+.container .form-container form input {
+  color: #b9b6d3;
+}
+.container .form-container form input::placeholder {
+  font-weight: 600;
+}
+.container .form-container form input, .container .form-container form button {
+  border: 1px solid #b9b6d3;
+  border-radius: 5px;
+  height: 50px;
+  padding: 5px 15px;
+  font-size: 1.1rem;
+  width: 90%;
+}
+.container .form-container form button {
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  background-color: #38cc8c;
+}
+.container .form-container form button:hover {
+  cursor: pointer;
+}
+.container .form-container p {
+  text-align: center;
+  width: 90%;
+  font-size: 0.85rem;
+  color: #b9b6d3;
+  margin: 0 auto;
+}
+.container .form-container p b {
+  color: #ff7a7a;
+}
+
+@media screen and (min-width: 950px) and (max-width: 1500px) {
+  body {
+    grid-auto-flow: column;
+    grid-template-columns: 40% 60%;
+    column-gap: 40px;
+    background-image: url("../images/bg-intro-desktop.png");
+    margin: 10vh auto;
+    width: 90%;
+  }
+
+  header {
+    align-self: center;
+    text-align: left;
+    margin-left: 80px;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  header h1 {
+    margin-left: 70px;
+  }
+  header p {
+    width: 80%;
+    margin-left: 70px;
+  }
+
+  .container {
+    width: 72%;
+  }
+  .container .trial {
+    padding: 20px 0;
+  }
+  .container .form-container form .input-container {
+    display: flex;
+  }
+  .container .form-container form .input-container input, .container .form-container form .input-container button {
+    margin: 0 auto;
+    width: 92%;
+  }
+  .container .form-container form .input-container .error-icon {
+    position: relative;
+    top: 15px;
+    right: 40px;
+    width: 20px;
+    height: 30px;
+  }
+  .container .form-container form .error-message, .container .form-container form .error-icon {
+    display: none;
+  }
+  .container .form-container form .error-message {
+    color: red;
+    margin: 5px 0;
+    justify-self: flex-end;
+    font-size: 0.7rem;
+  }
+  .container .form-container form button {
+    width: 100%;
+  }
+  .container .form-container form button:hover {
+    background-image: linear-gradient(rgba(207, 205, 205, 0.4) 0 0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
