@@ -72,6 +72,20 @@ header {
                 }
             }
 
+            .error-message, .error-icon {
+                display: none;
+            }
+
+            .error-icon {
+                position: relative;
+                top: -45px;
+                right: -270px;
+            }
+
+            .error-message {
+                justify-self: flex-end;
+            }
+
             input, button {
                 border: 1px solid $grayish-blue;
                 border-radius: 5px;
@@ -167,10 +181,6 @@ header {
                         width: 20px;
                         height: 30px;
                     }
-                }
-
-                .error-message, .error-icon {
-                    display: none;
                 }
 
                 .error-message {

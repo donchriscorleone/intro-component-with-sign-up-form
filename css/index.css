@@ -61,6 +61,17 @@ header p {
 .container .form-container form input::placeholder {
   font-weight: 600;
 }
+.container .form-container form .error-message, .container .form-container form .error-icon {
+  display: none;
+}
+.container .form-container form .error-icon {
+  position: relative;
+  top: -45px;
+  right: -270px;
+}
+.container .form-container form .error-message {
+  justify-self: flex-end;
+}
 .container .form-container form input, .container .form-container form button {
   border: 1px solid #b9b6d3;
   border-radius: 5px;
@@ -133,9 +144,6 @@ header p {
     right: 40px;
     width: 20px;
     height: 30px;
-  }
-  .container .form-container form .error-message, .container .form-container form .error-icon {
-    display: none;
   }
   .container .form-container form .error-message {
     color: red;
